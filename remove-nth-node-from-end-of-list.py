@@ -31,4 +31,4 @@ class Solution:
         while curr.next is not None:
             n += 1
             curr = curr.next
-        return n
+        return n 
