@@ -15,3 +15,20 @@ class Solution:
                 o.append(new)
                 
         return o
+
+    def generate2(self, numRows:int) -> List[List[int]]: # second solution
+        vals = []
+        for n in range(numRows):
+            o = [1]
+
+            for i in range(n):
+                v = 1
+                for j in range(i + 1):
+                    v *= n - j
+
+                v /= math.factorial(i + 1)
+                o.append(int(v))
+            print(o)
+            vals.append(o)
+        
+        return vals
